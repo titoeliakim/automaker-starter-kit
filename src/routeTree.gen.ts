@@ -17,7 +17,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardSettingsRouteImport } from './routes/dashboard/settings'
 import { Route as ProfileUserIdIndexRouteImport } from './routes/profile/$userId/index'
-import { Route as ApiStripeWebhookRouteImport } from './routes/api/stripe/webhook'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const UnauthenticatedRoute = UnauthenticatedRouteImport.update({
@@ -60,11 +59,6 @@ const ProfileUserIdIndexRoute = ProfileUserIdIndexRouteImport.update({
   path: '/profile/$userId/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiStripeWebhookRoute = ApiStripeWebhookRouteImport.update({
-  id: '/api/stripe/webhook',
-  path: '/api/stripe/webhook',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -80,7 +74,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/settings': typeof DashboardSettingsRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
-  '/api/stripe/webhook': typeof ApiStripeWebhookRoute
   '/profile/$userId': typeof ProfileUserIdIndexRoute
 }
 export interface FileRoutesByTo {
@@ -91,7 +84,6 @@ export interface FileRoutesByTo {
   '/dashboard/settings': typeof DashboardSettingsRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
-  '/api/stripe/webhook': typeof ApiStripeWebhookRoute
   '/profile/$userId': typeof ProfileUserIdIndexRoute
 }
 export interface FileRoutesById {
@@ -104,7 +96,6 @@ export interface FileRoutesById {
   '/dashboard/settings': typeof DashboardSettingsRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
-  '/api/stripe/webhook': typeof ApiStripeWebhookRoute
   '/profile/$userId/': typeof ProfileUserIdIndexRoute
 }
 export interface FileRouteTypes {
@@ -118,7 +109,6 @@ export interface FileRouteTypes {
     | '/dashboard/settings'
     | '/dashboard/'
     | '/api/auth/$'
-    | '/api/stripe/webhook'
     | '/profile/$userId'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -129,7 +119,6 @@ export interface FileRouteTypes {
     | '/dashboard/settings'
     | '/dashboard'
     | '/api/auth/$'
-    | '/api/stripe/webhook'
     | '/profile/$userId'
   id:
     | '__root__'
@@ -141,7 +130,6 @@ export interface FileRouteTypes {
     | '/dashboard/settings'
     | '/dashboard/'
     | '/api/auth/$'
-    | '/api/stripe/webhook'
     | '/profile/$userId/'
   fileRoutesById: FileRoutesById
 }
@@ -152,7 +140,6 @@ export interface RootRouteChildren {
   SignUpRoute: typeof SignUpRoute
   UnauthenticatedRoute: typeof UnauthenticatedRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
-  ApiStripeWebhookRoute: typeof ApiStripeWebhookRoute
   ProfileUserIdIndexRoute: typeof ProfileUserIdIndexRoute
 }
 
@@ -214,13 +201,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfileUserIdIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/stripe/webhook': {
-      id: '/api/stripe/webhook'
-      path: '/api/stripe/webhook'
-      fullPath: '/api/stripe/webhook'
-      preLoaderRoute: typeof ApiStripeWebhookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -252,7 +232,6 @@ const rootRouteChildren: RootRouteChildren = {
   SignUpRoute: SignUpRoute,
   UnauthenticatedRoute: UnauthenticatedRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
-  ApiStripeWebhookRoute: ApiStripeWebhookRoute,
   ProfileUserIdIndexRoute: ProfileUserIdIndexRoute,
 }
 export const routeTree = rootRouteImport

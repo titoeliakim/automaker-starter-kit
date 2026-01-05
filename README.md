@@ -1,17 +1,11 @@
-# Full Stack Campus
+# Full Stack Boilerplate
 
-An online community and training platform for aspiring full stack engineers. Master frontend and backend development, build real-world projects, and launch your software engineering career.
+A Full Stack boilerplate repository
 
 ## 🚀 Features
 
-- **Community Posts** - Create posts, comment, react, and share media attachments
-- **User Profiles** - Showcase your skills and portfolio
-- **Calendar Events** - Community calendar and event management
-- **Messaging** - Private messaging between community members
-- **Members Directory** - Discover and connect with other members
-- **Notifications** - Stay updated with real-time notifications
-- **Classroom Modules** - Educational content and learning modules
-- **Subscriptions** - Stripe-powered subscription plans (free/basic/pro)
+- **Landing Pages**
+- **User Profiles**
 
 ## 🛠️ Tech Stack
 
@@ -20,7 +14,6 @@ An online community and training platform for aspiring full stack engineers. Mas
 - **Authentication**: [Better Auth](https://www.better-auth.com/) with email/password authentication
 - **Styling**: Tailwind CSS with [Radix UI](https://www.radix-ui.com/) components
 - **File Storage**: AWS S3/R2 with presigned URL uploads
-- **Payments**: Stripe integration for subscriptions
 - **TypeScript**: Full type safety throughout
 
 ## 📋 Prerequisites
@@ -50,7 +43,6 @@ Copy `.env.example` to `.env` and configure:
 
 - Database connection (PostgreSQL)
 - Better Auth secrets
-- Stripe keys (for payments)
 - AWS S3/R2 credentials (for file storage)
 
 ### 4. Start the database
@@ -93,12 +85,6 @@ npm run db:generate  # Generate new migration files
 npm run db:studio    # Open Drizzle Studio for database management
 ```
 
-### Payments
-
-```bash
-npm run stripe:listen  # Listen for Stripe webhooks in development
-```
-
 ## 📁 Project Structure
 
 ```
@@ -131,7 +117,6 @@ Comprehensive documentation is available in the `docs/` folder:
 - **Data Fetching**: Uses TanStack Query with custom hooks pattern
 - **Authentication**: Better Auth with session management
 - **File Uploads**: Presigned URLs for direct S3/R2 uploads
-- **Subscriptions**: Stripe-based with plan limits enforcement
 - **Type Safety**: Full TypeScript with Drizzle ORM schema inference
 
 ## 🤝 Contributing

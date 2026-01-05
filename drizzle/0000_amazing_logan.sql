@@ -33,7 +33,6 @@ CREATE TABLE "user" (
 	"email_verified" boolean NOT NULL,
 	"image" text,
 	"is_admin" boolean NOT NULL,
-	"stripe_customer_id" text,
 	"subscription_id" text,
 	"plan" text NOT NULL,
 	"subscription_status" text,

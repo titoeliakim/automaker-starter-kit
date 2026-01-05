@@ -13,8 +13,6 @@ export const user = pgTable("user", {
   isAdmin: boolean("is_admin")
     .$default(() => false)
     .notNull(),
-  // Subscription fields
-  stripeCustomerId: text("stripe_customer_id"),
   subscriptionId: text("subscription_id"),
   plan: text("plan")
     .$default(() => "free")
@@ -126,3 +124,6 @@ export type SubscriptionStatus =
   | "incomplete_expired"
   | "trialing"
   | null;
+
+// Attachment types
+export type AttachmentType = "image" | "video";

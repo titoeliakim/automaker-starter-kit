@@ -10,10 +10,7 @@
     "start": "node .output/server/index.mjs",
     "db:generate": "dotenv -e .env -- drizzle-kit generate",
     "db:migrate": "dotenv -e .env -- drizzle-kit migrate",
-    "db:studio": "dotenv -e .env -- drizzle-kit studio",
-    "db:up": "docker compose up -d",
-    "db:down": "docker compose down",
-    "stripe:listen": "stripe listen --forward-to localhost:3000/api/stripe/webhook"
+    "db:studio": "dotenv -e .env -- drizzle-kit studio"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.936.0",
@@ -54,7 +51,6 @@
     "react-hook-form": "^7.66.1",
     "redaxios": "^0.5.1",
     "sonner": "^2.0.7",
-    "stripe": "^20.0.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^4.1.12"
