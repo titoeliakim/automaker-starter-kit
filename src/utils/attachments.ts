@@ -1,8 +1,3 @@
-import { deleteAttachmentFn } from "~/fn/attachments";
-import {
-  savePostAttachmentsFn,
-  saveCommentAttachmentsFn,
-} from "~/fn/attachments";
 import type { MediaUploadResult } from "~/utils/storage/media-helpers";
 
 /**
@@ -34,7 +29,9 @@ function mapAttachmentsToApiFormat(attachments: MediaUploadResult[]): Array<{
 async function deleteAttachments(attachmentIds: string[]): Promise<void> {
   if (attachmentIds.length > 0) {
     await Promise.all(
-      attachmentIds.map((id) => deleteAttachmentFn({ data: { id } }))
+      attachmentIds.map((id) => {
+        // TODO: Implement delete attachments
+      })
     );
   }
 }
@@ -77,12 +74,7 @@ export async function updatePostAttachments(
   options: UpdateAttachmentsOptions
 ): Promise<void> {
   await updateAttachments(options, async (attachments) => {
-    await savePostAttachmentsFn({
-      data: {
-        postId,
-        attachments,
-      },
-    });
+    // TODO: Implement save attachments
   });
 }
 
@@ -94,11 +86,6 @@ export async function updateCommentAttachments(
   options: UpdateAttachmentsOptions
 ): Promise<void> {
   await updateAttachments(options, async (attachments) => {
-    await saveCommentAttachmentsFn({
-      data: {
-        commentId,
-        attachments,
-      },
-    });
+    //TODO: Save attachments
   });
 }
