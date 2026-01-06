@@ -180,7 +180,7 @@ Required environment variables:
 
 ```bash
 # R2 Configuration
-R2_ENDPOINT=https://{account-id}.r2.cloudflarestorage.com
+R2_ENDPOINT=https://storage.railway.app
 R2_BUCKET=your-bucket-name
 R2_ACCESS_KEY_ID=your-access-key
 R2_SECRET_ACCESS_KEY=your-secret-key
