@@ -170,7 +170,6 @@ export const getAudioUrlFn = createServerFn({ method: "POST" })
 This would enable:
 
 - **Private files**: Only accessible to authorized users
-- **Subscription-gated content**: Check user subscription level
 - **Time-limited access**: Generate URLs with custom expiry times
 - **Usage tracking**: Log access for analytics
 - **Access control lists**: Fine-grained permissions per file

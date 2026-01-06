@@ -72,14 +72,12 @@ npm run db:studio          # Open Drizzle Studio for database management
 - Uses TanStack Start's file-based routing system
 - Database schema uses UUIDs for primary keys
 - File uploads go directly to cloud storage via presigned URLs
-- Subscription plans control feature access (playlists, upload limits)
 - Build process includes TypeScript type checking
 
 ## Additional Information
 
 - **Authentication** - please see `docs/authentication.md` for information about how authentication is setup on this project.
 - **architecture** - please see `docs/architecture.md` for information about how the code is setup in a layered architecture on this project.
-- **subscriptions** - please see `docs/subscriptions.md` for learn about how user plans and subscriptions are setup.
 - **tanstack** - please see `docs/tanstack.md` for techincal implenetation detail on how to create tanstack start routes or server functions.
 - **ux** - please see `docs/ux.md` for user experience guidelines to make sure this app feels consistent.
 - **file-uploads** - please see `docs/file-uploads.md` for more information about how file uploads work in our code base

@@ -106,7 +106,6 @@ Comprehensive documentation is available in the `docs/` folder:
 
 - **[Architecture](./docs/architecture.md)** - Code organization and layered architecture
 - **[Authentication](./docs/authentication.md)** - Authentication setup and implementation
-- **[Subscriptions](./docs/subscriptions.md)** - User plans and subscription system
 - **[TanStack Start](./docs/tanstack.md)** - Technical implementation details for routes and server functions
 - **[UX Guidelines](./docs/ux.md)** - User experience guidelines for consistency
 - **[File Uploads](./docs/file-uploads.md)** - File upload implementation details
